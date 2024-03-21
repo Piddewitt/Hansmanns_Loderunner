@@ -1,5 +1,8 @@
 # Hansmanns Loderunner
-Modified Loderunner Game with some new features to experiment with.
+A modified Lode Runner game with some new features to experiment with.
+  - All levels of **Hansmanns Lode Runner.d64** are collected from the attached Apple/MSX/C64 files
+  - All levels are solvable (hopefully), even the #227 one
+  - As the hard ones are picked up from the MSX binaries, you may want to watch an MSX solution video on YouTube to cure you from despair
 ## Directory location
 - **dox**
 - **npp**
@@ -19,7 +22,7 @@ Modified Loderunner Game with some new features to experiment with.
 ## New Start Game Commands
 - **S** - Save a game in progress (Available only directly before the play has started)
 - **D** - Toggle the demo move recorder (Beep + Grey Border)
-  - **Usage**
+  - Usage
     - Select the desired demo level
     - Press **D** to start the recording (Beep + Grey Border)
     - Play the level to record the moves. Only $ff tick are possible for each move. Especially if you need to wait longer try to change the Lode Runner view direction to restart at tick $00 again
@@ -42,18 +45,17 @@ Modified Loderunner Game with some new features to experiment with.
 - **Z** - Toggle game random level mode. This restarts the game from Level One
 - **Q** - Return from test to editor
 - **L** - Load and Play a saved game
-  - **Special**
-    - Debug Mode (Championship Loderunner style)
-      - Activation
-        - Start playing a level
-        - Press RUN/STOP to pause the game
-        - Press F7 to toggle debug mode (Beep + Light Grey Border)
-        - Press RUN/STOP to continue the game
-      - Debug Mode commands
-        - **G** - Collect all the missing gold
-        - **S** - Score 1075 points
-        - **L** - Discount number of lives down to 1
-        - Commands **U**/**P**/**F**/**G** do not set the cheat flag anymore
+- **Special** - Debug Mode (Championship Loderunner style)
+    - Activation
+      - Start playing a level
+      - Press RUN/STOP to pause the game
+      - Press F7 to toggle debug mode (Beep + Light Grey Border)
+      - Press RUN/STOP to continue the game
+    - Debug Mode commands
+      - **G** - Collect all the missing gold
+      - **S** - Score 1075 points
+      - **L** - Discount number of lives down to 1
+      - Commands **U**/**P**/**F**/**G** do not set the cheat flag anymore
 ## New Board Editor Commands
 - **x** - Swap two levels
 - **s** - Show high score
@@ -76,7 +78,7 @@ Modified Loderunner Game with some new features to experiment with.
 - **J** - Rotate the level a column left
 - **K** - Rotate the level a column right
 - **L** - Rotate the level a column right
-- **cursor l/r/u/d** - Allow cursor keys for edit movement (For Emulator usage)
+- **Cursor l/r/u/d** - Allow cursor keys for edit movement (emulator usage)
 ## Special
   - **X** - Toggle xmit mode
     - Copy the actual level from disk #8 to a selected level on disk #9
