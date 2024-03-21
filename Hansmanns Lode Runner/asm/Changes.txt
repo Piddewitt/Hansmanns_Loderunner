@@ -1,0 +1,202 @@
+Changes
+  CleanUp:
+    copy protection code removed
+      CopyProtectionHandler
+      ChecksumBuild_Start
+      TabCopyProtValues_01
+      TabCopyProtValues_02
+      CopyProtection
+      ChecksumBuild_End
+      TabDiskCmdFileName
+      TabDiskCmd
+      ChecksumBuild
+      smTileDataPtr
+      TabImageData <-- init to correct starting location $a000
+    unused code removed
+      S_8c92
+      TabNoUse_LO
+      TabNoUse_HI
+    duplicate code removed
+      GarbageArea_01
+    garbage code/tabs removed
+      GarbageArea_02
+    circle code removed
+      GameStartCycleCheck
+      IGC_Cycle
+      TabInGameCmdChar
+      TabInGameCmdAddress
+      CircleCalcHiresColByteOff
+      StartCycleHandler
+      StartCyclePrepare
+      StartCircleGetColNum
+      StartCircleShowOctants
+      TabCircleTileClearClose
+      TabCircleTileClearOpen
+      HL_StartCycle
+      HL_CirclePhase
+      HLZ_WorkCircleColNum
+      HLZ_Circle* zero page entries
+; --------------------------------------------------------------------------------------------------------------------- ;
+  .hbu000.
+    decompress image data
+  .hbu001.
+    misc changes
+    new start screen
+    <obsolete> code removed
+  .hbu002.
+    relocate level data from tt=3 to tt=1
+    allow 250 levels
+  .hbu003.
+    demo level handling enhanced
+    more garbage removed at the end of the new moves
+  .hbu004.
+    demo speed increase
+  .hbu005.
+    demo sound
+  .hbu006.
+    new level/demo/edit colors
+  .hbu007.
+    new sprite colors
+  .hbu008.
+    set enemy rebirth colors
+  .hbu009.
+    victory message
+  .hbu010.
+    cursor home
+  .hbu011.
+    level time output after finishing a level
+  .hbu012.
+    new level editor commands
+      t - edit level success message
+      A - reload a level
+      U - Forward a level
+      P - Backward a level
+      allow cursor keys
+      l - new move cursor right key
+      flip level/curor past min/max borders
+  .hbu013.
+    change lr start flicker
+  .hbu014.
+    new in game command
+      P - play previous level
+    new board editor commands
+      s - show high score
+      S - init high scores
+  .hbu015.
+    new highscore format and colors
+  .hbu016.
+    highscore processing optimized
+    sub DiskCmdResetSpeed removed
+  .hbu017.
+    new board editor command
+      x - swap two levels
+  .hbu018.
+    new level editor command
+      V -  mirror this level
+    new in game command
+      V -  toggle level mirror mode
+  .hbu019.
+    new level editor command
+      T - test edited level directly
+    new in game command
+      Q - return from test to editor
+  .hbu020.
+    message output handling renewd
+  .hbu021.
+    new in game command
+      Z - toggle random level mode
+  .hbu022.
+    new in game command
+      debug mode
+        activation
+          play a level
+          RUN/STOP - pause
+          F7 - toggle debug mode (beep + grey border)
+          RUN/STOP - continue
+      debug commands
+        G - collect all the missing gold
+        S - score 1075 points
+        L - discount lives down to 1
+        commands U/P/F/G do not set the cheat flag anymore
+    new level editor command
+      X - toggle xmit mode
+            write selected levels to disk 9 from game play
+            drive 9 must be available
+          now: x: xmit actual level
+          now: +: set next target xmit level - <SHIFT>+ adds 10
+          now: -: set prev target xmit level - <SHIFT>- subtracts 10
+  .hbu023.
+    display editor messages in message line
+  .hbu024.
+    enemy rebirth animation brushed up
+  .hbu025.
+    no enemy rebirth if place already occupied by another reborn enemy
+  .hbu026.
+    enemy resurection corrected in case of a hidden ladder display
+  .hbu027.
+    new level editor commands
+      edit moves with joystick <-- use HL_JoystickOld 
+  .hbu028.
+    championship LR style load/save game
+    new in game commands
+      L - load and play a saved game
+      S - save a game in progress (available only before the play has started)
+  .hbu029.
+    8 chr high score names
+  .hbu030.
+    up to 128 hidden ladders
+    ShowExitLadders shortened
+  .hbu031.
+    loose the actual level score on death
+  .hbu032.
+    top scorer highscore data on title screen
+  .hbu033.
+    setup a white loderunner tile for edit mode
+  .hbu034.
+    new in game command
+      D - toggle demo move recorder
+          Start the desired level
+          Press D to start the recording
+          Play the level to record the moves (Beep + Grey Border)
+          There will be no buffer overflow check!
+            The game will crash if more than $280 (640) moves are recorded (Overflow into the I/O area)
+          Auto Replay of the Recording (Beep + Dark Grey Border)
+            Automatically after successful level completion
+            Get caught by an enemy
+            After an R
+            After an A
+          End Replay Mode (Beep + Black Border)
+            Stop the replay by pressing FIRE or any KEY
+            Get caught by an enemy
+          Take Over the recorded demo moves and level
+            Copy and adapt the moves data from the HL_MemBufDemoMoves buffer to its desired TabDemoMoves location
+            Copy level data from HL_LevelDataBuf to its desired TabDemoDataLevel location
+            Re-assemble the code
+  .hbu035.
+    new level editor command
+      C - Clear a level
+  .hbu036.
+    new level editor commands
+      I - Rotate a level data row up
+      M - Rotate a row down
+      J - Rotate a column left
+      K - Rotate a column right
+      L - Rotate a column right
+  .hbu037.
+    save level times
+  .hbu038.
+    look for and display a level best time
+  .hbu039.
+    new board editor command
+      I - init level data/high score data/time data on disk
+      C - clear a level on disk
+      T - clear the level best time blocks on disk
+      S - clear the save games block on disk
+      L - clear the leaderboard block on disk
+  .hbu040.
+    avoid high scores redisplay
+  .hbu041.
+    champion handling
+  .hbu042.
+    set hole open time to max (in var)
+  --------------------------------------------------------------------------------------------------------------------- ;
