@@ -1,5 +1,5 @@
 # Hansmanns Loderunner
-Modified Loderunner Game with some of new features to experiment with.
+Modified Loderunner Game with some new features to experiment with.
 ## Directory location
 - **dox**
 - **npp**
