@@ -1,5 +1,7 @@
 # Hansmanns Loderunner
 A modified Lode Runner game with some new features to experiment with.
+  - All changes of the original Lode Runner game are labeled in the source code with **.HBUnnn.**
+  - All changes of the original Lode Runner game are documented in **Changes.txt** of the **asm** sub-directory
   - All levels of **Hansmanns Lode Runner.d64** are collected from the attached Apple/MSX/C64 files
   - All levels are solvable (hopefully), even the #227 one
   - As the hard ones are picked up from the MSX binaries, you may want to watch an MSX solution video on YouTube to cure you from despair
